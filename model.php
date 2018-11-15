@@ -49,6 +49,14 @@ class utilisateur
   {
     return $this->pass;
   }
+  public function setVille($ville)
+  {
+    $this->ville = $ville;
+  }
+  public function getVille()
+  {
+    return $this->ville;
+  }
 }
 
  ?>

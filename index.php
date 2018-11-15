@@ -3,6 +3,16 @@
 //on demarre la session
 session_start();
 
+// connection à la base de donnée.
+  try
+{
+  $bdd = new PDO('mysql:host=localhost;dbname=Ownership;charset=utf8', 'root', 'root');
+}
+catch(Exception $e)
+{
+      die('Erreur : '.$e->getMessage());
+}
+
 // on route vers le controleur approprié
 if (!empty($_GET['page']) && is_file('controleur_'.$_GET['page'].'.php'))
 {
@@ -14,14 +24,6 @@ else
 {
       include 'controleur_login.php';
 }
-// connection à la base de donnée.
-  try
-{
-  $bdd = new PDO('mysql:host=localhost;dbname=Ownership;charset=utf8', 'root', 'root');
-}
-catch(Exception $e)
-{
-      die('Erreur : '.$e->getMessage());
-}
+
 
  ?>
