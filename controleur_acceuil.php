@@ -4,8 +4,8 @@ include 'model.php';
 $login = $_POST['login'];
 $pass = $_POST['pass'];
 
-if (isset($login)
-&& isset($pass)){
+if (!empty($login)
+&& !empty($pass)){
 
   try{
     $sql = 'SELECT * FROM utilisateur';
