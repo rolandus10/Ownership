@@ -8,19 +8,26 @@ if (!empty($login)
 && !empty($pass)){
 
   try{
-    $sql = 'SELECT * FROM utilisateur';
-    $resultat=$bdd->query($sql);
+    $sql_login = 'SELECT * FROM utilisateur';
+    $resultat_login=$bdd->query($sql_login);
+
+
 
     //permet de savoir si l'utilisateur a éte trouvé
     $trouvé = False;
 
     //parcour de toutes les lignes de la table utilisateur
-    while($data = $resultat->fetch()){
-      if ($data['login']== $login && $data['mot_de_passe']== $pass)
+    while($data_login = $resultat_login->fetch()){
+      if ($data_login['login']== $login && $data_login['mot_de_passe']== $pass)
       {
         $trouvé = True;
-        echo '<p>Bienvenue '. $data['Prenom'].'</p><br>';
-        include 'acceuil.html';
+        $sql_data = "SELECT * FROM ((
+          utilisateur INNER JOIN stocker ON stocker.utilisateur_idutilisateur =
+           utilisateur.idutilisateur) INNER JOIN produit ON produit.idProduit =
+           stocker.produits_idProduit) INNER JOIN vetement ON produit.vetement_idvetements =
+            vetement.idvetements WHERE login = '$login' AND mot_de_passe = '$pass'";
+        $resultat_data=$bdd->query($sql_data);
+        include 'acceuil.php';
       }
     }
 

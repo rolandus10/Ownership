@@ -19,8 +19,8 @@ if(isset($_POST['nom'])
 
   try{
     //insertion de l'utilisateur dans la base de donnée
-    $requete = $bdd->prepare('INSERT INTO utilisateur(login,mot_de_passe,Nom,Prenom,Ville,mail) VALUES(?,?,?,?,?,?)');
-    $requete->execute( array($_POST['email'],$_POST['pass'],$_POST['nom'],$_POST['prenom'],$_POST['ville'],$_POST['email']));
+    $requete = $bdd->prepare('INSERT INTO utilisateur(login,mot_de_passe,nom,prenom,ville) VALUES(?,?,?,?,?)');
+    $requete->execute( array($_POST['email'],$_POST['pass'],$_POST['nom'],$_POST['prenom'],$_POST['ville']));
 
     //on doit creer une vue pour afficher ce message
     echo '<p> Felicitation '.$_POST['prenom'].' vous êtes inscrit sur Ownership</p>';

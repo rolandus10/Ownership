@@ -122,19 +122,6 @@ CREATE TABLE IF NOT EXISTS ownership.`appreciation` (
 ENGINE = MyISAM;
 
 
-
--- -----------------------------------------------------
--- Table ownership.`types`
--- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS ownership.`types` (
-  idType INT NOT NULL AUTO_INCREMENT,
-  Nomtype VARCHAR(45) NULL,
-  catégories_idCatégorie INT NOT NULL,
-  PRIMARY KEY (idType))
-ENGINE = MyISAM;
-
-
-
 -- -----------------------------------------------------
 -- Table ownership.`Appartenir`
 -- -----------------------------------------------------
@@ -164,27 +151,6 @@ CREATE TABLE IF NOT EXISTS ownership.`appartenir` (
   groupes_idGroupe INT NOT NULL,
   PRIMARY KEY (utilisateur_idutilisateur, groupes_idGroupe))
 ENGINE = MyISAM;
-
-
-
--- -----------------------------------------------------
--- Table ownership.`stocker`
--- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS ownership.`stocker` (
-  utilisateur_idutilisateur INT NOT NULL,
-  produits_idProduit INT NOT NULL,
-  quantite VARCHAR(45) NULL,
-  PRIMARY KEY (utilisateur_idutilisateur, produits_idProduit))
-ENGINE = MyISAM;
-
-
--- -----------------------------------------------------
--- Table ownership.`user`
--- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS ownership.`user` (
-  iduser INT NOT NULL AUTO_INCREMENT,
-  PRIMARY KEY (iduser))
-ENGINE = InnoDB;
 
 
 -- -----------------------------------------------------
