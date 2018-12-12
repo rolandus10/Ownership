@@ -10,8 +10,10 @@ if (!empty($_POST['nom'])
     $requete = $bdd->prepare($sql);
     $requete->execute( array($_POST['nom'],$_POST['description'],$_POST['date_achat'],$_POST['prix']));
 
+    
+
     //on doit creer une vue pour afficher ce message
-    echo '<p> vetement enregistré </p>';
+    echo '<p> objet de valeur enregistré </p>';
   }
 
   catch(Exception $e){

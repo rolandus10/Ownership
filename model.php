@@ -10,6 +10,7 @@ class utilisateur
   private $ville;
   private $email;
   private $pass;
+  private $id_utilisateur;
 
 
   function __construct()
@@ -56,6 +57,15 @@ class utilisateur
   public function getVille()
   {
     return $this->ville;
+  }
+
+  public function setId_utilisateur($id_utilisateur)
+  {
+    $this->id_utilisateur = $id_utilisateur;
+  }
+  public function getId_utilisateur()
+  {
+    return $this->id_utilisateur;
   }
 }
 

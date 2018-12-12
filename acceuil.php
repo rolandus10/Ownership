@@ -5,8 +5,6 @@
    <meta charset="utf-8">
    <link rel="stylesheet" href="mycss.css">
   </head>
-
-  <body>
      <nav>
 	   <ul>
          <li class ="acceuil-stocker"><a href="stocker.html">Sauvegarder nouveau produit</a>
@@ -29,26 +27,4 @@
 		 <li class="acceuil-recherche"><a>Recherche <input type="search" /></a></li>
 		</ul>
      </nav>
-     <table>
-       <caption> Vos vetements </caption>
-
-        <tr>
-            <th>Type</th>
-            <th>Description</th>
-            <th>Couleur</th>
-            <th>Quantité</th>
-         </tr>
-
-     <?php
-     while($data = $resultat_data->fetch()){
-        echo '<tr>
-            <td>'; echo  $data['type']; echo'</td>
-            <td>'; echo $data['description'];echo '</td>
-            <td>'; echo $data['couleur'];echo '</td>
-            <td>'; echo $data['quantite'];echo '</td>
-        </tr>';
-     }
-     ?>
-     </table>
-  </body>
 </html>

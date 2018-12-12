@@ -2,6 +2,10 @@
 
 include 'model.php';
 
+if ($_POST['passconfirme'] != $_POST['pass']) {
+  echo '<p> /!\ Veuillez completer les champs correctement</p><br>';
+  include 'nouvel_utilisateur.html';
+}
 if(isset($_POST['nom'])
 && isset($_POST['prenom'])
 && isset($_POST['ville'])
