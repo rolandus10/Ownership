@@ -1,15 +1,7 @@
 
-caption
-{
-    border: 1px solid black;
-}
-body{
-	font-family: 'source code pro', calibri, serif;
-	margin: 0px;
-	padding: 0px;
-}
+
 /*on utilise ">"pour ne cibler que la liste ul qui est un enfant direct de nav*/
-nav {
+nav{
 	width:100%;
 	background-color : #424558;
 }

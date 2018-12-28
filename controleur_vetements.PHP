@@ -45,7 +45,8 @@ if (!empty($_POST['nom'])
 
    $utilisateur = unserialize($_SESSION['utilisateur']);
    $idutilisateur = $utilisateur->getId_utilisateur();
-   $sql_stoker = 'INSERT INTO stoker(utilisateur_idutilisateur,
+   echo "$idutilisateur";
+   $sql_stoker = 'INSERT INTO stocker(utilisateur_idutilisateur,
    produits_idProduit,quantite) VALUES(?,?,?)';
    $requete_stocker = $bdd->prepare($sql_stoker);
    $requete_stocker->execute( array($idutilisateur,$idproduit,$_POST['quantite']));
@@ -63,4 +64,5 @@ else {
   echo '<p> des champs sont vides ou incorrectes </p>';
   include 'vetement.html';
 }
+
  ?>
