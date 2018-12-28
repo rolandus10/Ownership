@@ -100,7 +100,7 @@ ENGINE = InnoDB;
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS ownership.`produit` (
   idProduit INT NOT NULL AUTO_INCREMENT,
-  nom VARCHAR(205) NULL,
+  Nom VARCHAR(205) NULL,
   description VARCHAR(255) NULL,
   prix DECIMAL(65) NULL,
   vetement_idvetements INT NOT NULL,
