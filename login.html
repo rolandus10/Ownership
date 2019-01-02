@@ -1,23 +1,58 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
-    <meta charset="utf-8">
-    <link rel="stylesheet" href="mycss.css">
-    <title>Login</title>
-   <h1>Ownership</h1>
+    <meta name="viewport" content="width=device-width initial-scale=1" >
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+    <title>Connexion</title>
   </head>
+
   <body>
+
+<!bloc1>
+<div class="container">
+  <div class="row">
+    <div class="col-sm">
+      <!One of three columns>
+    </div>
+    <div class="col-sm">
+      <div class="jumbotron">
+  <h2 class="display-3">Ownership</h2>
+  <p class="lead">
     <form action="index.php?page=acceuil" method="post">
-      <label for="login">login :</label><input type="text" name="login"/>
-      <br>
-      <label for="password">mot de passe:</label>
-      <input type="password" name="pass">
-      <br/>
-      <input type="submit"value="ok"></input>
+      <fieldset>
+        <legend><b><u>Connexion</u></b></legend>
+        <div class="form-group">
+          <label for="exampleInputEmail1">Login:</label>
+          <input type="text" name="login" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Entrez votre login">
+        </div>
+        <div class="form-group">
+          <label for="exampleInputPassword1">Mot de passe:</label>
+          <input type="password" name="pass" class="form-control" id="exampleInputPassword1" placeholder="Entrez votre mot de passe">
+          <small id="emailHelp" class="form-text text-muted">Nous vous assurons la securite de votre mot de passe.</small>
+          <input type="submit" value="Se connecter" class="btn btn-primary"></input>
+
+        </div>
+      </form>
+  </p>
+
+  <hr class="my-4">
+  <p><button type="button" class="btn btn-link">Mot de passe oublié?</button></p>
+  <p class="lead">
+      <form action="nouvel_utilisateur.html" method="post">
+      <input href="nouvel_utilisateur.html" type="submit" value="Nouvel utilisateur" class="btn btn-primary"></input>
     </form>
-    <form action="nouvel_utilisateur.html" method="post">
-      <input type="submit" value="nouvel utilisateur"></input>
-    </form>
+  </p>
+</div>
+    </div>
+    <div class="col-sm">
+      <!One of three columns>
+    </div>
+  </div>
+</div>
+
 
   </body>
 </html>

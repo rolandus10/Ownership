@@ -27,7 +27,7 @@ if(isset($_POST['nom'])
     $requete->execute( array($_POST['email'],$_POST['pass'],$_POST['nom'],$_POST['prenom'],$_POST['ville']));
 
     //on doit creer une vue pour afficher ce message
-    echo '<p> Felicitation '.$_POST['prenom'].' vous êtes inscrit sur Ownership</p>';
+    include "felicitation.php";
   }
 
   catch(Exception $e){

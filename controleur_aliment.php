@@ -98,10 +98,9 @@ if(!empty($_POST['nom_aliment'])){
       $resultat_data=$bdd->query($sql_data);
 
 
-
-
-    include 'acceuil.php';
+    include 'aliment_view.php';
 }
+
 else {
   echo '<p> des champs sont vides ou incorrectes </p>';
   include 'aliment.html';

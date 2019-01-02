@@ -6,11 +6,10 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 
-    <title>Stocker objet de valeur</title>
+    <title>Accueil</title>
   </head>
 
   <body>
-
 
 <!bloc1>
 
@@ -86,13 +85,12 @@
 </div>
 
 
-
-
 <!bloc2>
-<img src="images\6.jpg" class="img-fluid img-responsive  backgrounding" alt="Responsive image">
+<img src="images\5.jpg" class="img-fluid img-responsive  backgrounding" alt="Responsive image">
+
 <p><p><p>
 <div class="container">
-<form action="index.php?page=objet_valeur" method="post">
+<form action="index.php?page=vetements" method="post" >
 
   <div class="container">
     <div class="row">
@@ -100,14 +98,14 @@
 
       </div>
       <div class="col-sm">
-        <legend><b><i class="text-info"><h3><u>Nouvel Objet de valeur</u></h3></i></b></legend>
+        <legend><b><i class="text-info"><h3><u>Nouveau Vetement</u></h3></i></b></legend>
 
 
 
 <p><p><p>
 
     <div class="col">
-      Nom: <input name="nom" type="text" class="form-control" placeholder="Nom de l'objet">
+      Nom: <input  name="nom" type="text" class="form-control" placeholder="Nom de l'objet">
     </div>
 
     <p><p><p>
@@ -118,26 +116,34 @@
           <label class="mr-sm-2 sr-only" for="inlineFormCustomSelect">Preference</label>
           Type: <select name="type" class="custom-select mr-sm-2" id="inlineFormCustomSelect">
             <option selected>Choisir...</option>
-            <option value="1">Luxe</option>
-            <option value="2">Art</option>
-            <option value="3">Bijoux</option>
-            <option value="4">Personnel</option>
-            <option value="6">Autre</option>
+            <option value="Haut">Haut</option>
+            <option value="Bas">Bas</option>
+            <option value="Chaussure">Chaussure</option>
+            <option value="Combinaison">Combinaison</option>
+            <option value="Autre">Autre</option>
 
           </select>
         </div>
-      </div>
+
+<p><p><p>
+    <div class="col">
+      Taille: <input name="taille" type="number" class="form-control" placeholder="Taile: S,M,L... ou 38,40,...">
+    </div>
+
+<p><p><p>
+  <div class="col">
+    Marque: <input name="marque" type="text" class="form-control" placeholder="Entrer la marque">
+  </div>
+
+  <p><p><p>
+    <div class="col">
+      Couleur: <input name="couleur" type="text" class="form-control" placeholder="Entrer la couleur">
     </div>
 
 
 <p><p><p>
   <div class="col">
-    Prix: <input name="prix" type="number" class="form-control" placeholder="Prix unitaire en €">
-  </div>
-
-<p><p><p>
-  <div class="col">
-    Date d'achat: <input name="date_achat" type="date" class="form-control">
+    Prix: <input  name="prix" type="number" class="form-control" placeholder="Prix unitaire en €">
   </div>
 
   <p><p><p>
@@ -147,12 +153,18 @@
 
     <p><p><p>
       <div class="col">
-        Description: <input name="description" type="text" class="form-control" placeholder="Decrivez votre bien">
+        Date d'achat: <input name="date_achat" type="date" class="form-control" placeholder="Entrer la date d'achat">
+      </div>
+
+    <p><p><p>
+      <div class="col">
+        Description: <input name="description" type="textarea" class="form-control" placeholder="Decrivez votre vetement">
       </div>
 
       <p><p><p>
         <div class="col">
-          <input class="btn btn-outline-success my-2 my-sm-0"  type="submit" value="Enregistrer">
+          <input type="submit" value="Enregistrer" class="btn btn-outline-primary"></input>
+
         </div>
 
 

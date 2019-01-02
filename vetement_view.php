@@ -6,11 +6,10 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 
-    <title>Stocker objet de valeur</title>
+    <title>Vetement</title>
   </head>
 
   <body>
-
 
 <!bloc1>
 
@@ -38,7 +37,7 @@
         <!<div class="container">
           <!<div class="row">
             <!<div class="col-lg-1  col-xs-1">
-        <a class="nav-link" href="#"><h3><b><p class="text-success">Profil</p></h3><!<img src="C:\Users\SONY\Desktop\Bootstrap\images\profil2.png" class="img-responsive   img-circle" alt="..."> <span class="sr-only">(current)</span></a>
+        <a class="nav-link" href="#"><h3><b><p class="text-success">Profil</p></h3><!<img src="C:\Users\SONY\Desktop\Bootstrapimages\profil2.png" class="img-responsive   img-circle" alt="..."> <span class="sr-only">(current)</span></a>
             <!</div>
          <!</div>
        <!</div>
@@ -50,7 +49,7 @@
 </nav>
 
 
-<div class="container-fluid" style="background-color: #1C1C1C"> <!2A0A1B>
+<div class="container-fluid" style="background-color: #1C1C1C">
   <div class="row">
     <div class="col-sm">
       <!première colonne>
@@ -63,12 +62,12 @@
           <ul class="navbar-nav mr-auto">
 
             <li class="nav-item">
-              <a class="nav-link  text-light" href="index.php?page=aliment_view">Aliments</a>
+              <a class="nav-link  text-light" href="index.php?page=retour">Acceuil</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link  text-light " href="index.php?page=vetement_view">Vetements</a>
+              <a class="nav-link text-light" href="index.php?page=aliment_view">Aliments</a>
             </li>
-            <li class="nav-item ">
+            <li class="nav-item">
               <a class="nav-link text-light" href="index.php?page=objet_valeur_view">Objets de valeur</a>
             </li>
 
@@ -89,88 +88,49 @@
 
 
 <!bloc2>
-<img src="images\6.jpg" class="img-fluid img-responsive  backgrounding" alt="Responsive image">
-<p><p><p>
-<div class="container">
-<form action="index.php?page=objet_valeur" method="post">
 
-  <div class="container">
-    <div class="row">
-      <div class="col-sm">
-
-      </div>
-      <div class="col-sm">
-        <legend><b><i class="text-info"><h3><u>Nouvel Objet de valeur</u></h3></i></b></legend>
-
-
-
-<p><p><p>
-
-    <div class="col">
-      Nom: <input name="nom" type="text" class="form-control" placeholder="Nom de l'objet">
-    </div>
-
-    <p><p><p>
-
-    <div class="col">
-      <div class="form-row align-items-center">
-        <div class="col-auto my-1">
-          <label class="mr-sm-2 sr-only" for="inlineFormCustomSelect">Preference</label>
-          Type: <select name="type" class="custom-select mr-sm-2" id="inlineFormCustomSelect">
-            <option selected>Choisir...</option>
-            <option value="1">Luxe</option>
-            <option value="2">Art</option>
-            <option value="3">Bijoux</option>
-            <option value="4">Personnel</option>
-            <option value="6">Autre</option>
-
-          </select>
-        </div>
-      </div>
-    </div>
-
-
-<p><p><p>
-  <div class="col">
-    Prix: <input name="prix" type="number" class="form-control" placeholder="Prix unitaire en €">
-  </div>
-
-<p><p><p>
-  <div class="col">
-    Date d'achat: <input name="date_achat" type="date" class="form-control">
-  </div>
-
-  <p><p><p>
-    <div class="col">
-      Quantité: <input name="quantite" type="number" class="form-control" placeholder="Entrer la quantité">
-    </div>
-
-    <p><p><p>
-      <div class="col">
-        Description: <input name="description" type="text" class="form-control" placeholder="Decrivez votre bien">
-      </div>
-
-      <p><p><p>
-        <div class="col">
-          <input class="btn btn-outline-success my-2 my-sm-0"  type="submit" value="Enregistrer">
-        </div>
-
-
-    </div>
-      <div class="col-sm">
-
-      </div>
-    </div>
-  </div>
-
+  <div class="container ">
+    <p><p><p><p><p><p><p><p><p><p><p><p><p><p><p><p><p><p><p><p><p><p><p><p>
+<legend><b><i class="text-success"><h3><u>VOS VETEMENTS</u></h3></i></b></legend>
+<form class="form-inline my-2 my-lg-0" action="index.php?page=vetements" method="post">
+    <input class="form-control mr-sm-2" placeholder="supprimer un objet" type="text" name="nom_vetement"><br>
+    <input class="btn btn-outline-success my-2 my-sm-0"  type="submit" value="supprimer">
 </form>
+    <table class="table table-hover  table table-borderless">
+      <thead class="thead-dark">
+      <tr>
+        <th scope="col">Nom</th>
+        <th scope="col">couleur</th>
+        <th scope="col">type</th>
+      </tr>
+      <?php
+      while($data = $resultat_data->fetch()){
+        echo '<tr>
+            <td>'; echo  $data['Nom']; echo'</td>
+            <td>';echo $data['couleur'];echo '</td>
+            <td>';echo $data['type'];echo '</td>
+        </tr>';
+      }
+    ?>
+
+    </tbody>
+  </table>
 </div>
 
+<div class="container">
+  <div class="row">
+    <div class="col-sm">
 
-
-
-<!bloc3>
-
+    </div>
+    <div class="col-sm">
+      <form action="vetement.html" class="form-inline my-2 my-lg-0">
+        <input value="Nouveau vetement" class="btn btn-outline-success my-2 my-sm-0" type="submit"></input>
+      </form>
+    </div>
+    <div class="col-sm">
+    </div>
+  </div>
+</div>
 
 
 

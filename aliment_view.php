@@ -49,7 +49,7 @@
 </nav>
 
 
-<div class="container-fluid" style="background-color: #1C1C1C"> <!2A0A1B>
+<div class="container-fluid" style="background-color: #1C1C1C">
   <div class="row">
     <div class="col-sm">
       <!première colonne>
@@ -62,12 +62,12 @@
           <ul class="navbar-nav mr-auto">
 
             <li class="nav-item">
-              <a class="nav-link  text-light" href="index.php?page=aliment_view">Aliments</a>
+                <a class="nav-link text-light" href="index.php?page=retour" >acceuil</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link  text-light " href="index.php?page=vetement_view">Vetements</a>
+              <a class="nav-link text-light" href="index.php?page=vetement_view" >Vetements</a>
             </li>
-            <li class="nav-item ">
+            <li class="nav-item">
               <a class="nav-link text-light" href="index.php?page=objet_valeur_view">Objets de valeur</a>
             </li>
 
@@ -87,86 +87,53 @@
 
 
 
-
-
 <!bloc2>
 
-<img src="images\4.jpg" class="img-fluid img-responsive  backgrounding" alt="Responsive image">
-
-<p><p><p>
-<div class="container">
-<form action="index.php?page=aliment" method="post">
-  <div class="container">
-    <div class="row">
-      <div class="col-sm">
-
-      </div>
-      <div class="col-sm">
-        <legend><b><i class="text-info"><h3><u>Nouvel Aliment</u></h3></i></b></legend>
-
-
-
-<p><p><p>
-
-    <div class="col">
-      Nom: <input type="text" name="nom" class="form-control" placeholder="Nom de l'aliment">
-    </div>
-
-    <p><p><p>
-
-    <div class="col">
-      <div class="form-row align-items-center">
-        <div class="col-auto my-1">
-          Type: <select name="type" class="custom-select mr-sm-2" id="inlineFormCustomSelect">
-            <option selected>Choisir...</option>
-            <option value="Fruit">Fruit</option>
-            <option value="Legume">Legume</option>
-            <option value="Charcuterie">Charcuterie</option>
-            <option value="Laitier">Laitier</option>
-            <option value="Boisson">Boisson</option>
-            <option value="Autre">Autre</option>
-
-          </select>
-        </div>
-      </div>
-    </div>
-
-
-
-<p><p><p>
-  <div class="col">
-    Prix: <input type="number" name="prix" class="form-control" placeholder="Prix unitaire en €">
-  </div>
-
-<p><p><p>
-  <div class="col">
-    Date de peremption (ou une estimation): <input type="date" name="date_peremption" class="form-control">
-  </div>
-
-  <p><p><p>
-    <div class="col">
-      Quantité: <input type="number" class="form-control" placeholder="Entrer la quantité">
-    </div>
-
-    <p><p><p>
-      <div class="col">
-        Description: <input type="text" name="description" class="form-control" placeholder="Decrivez vos aliments">
-      </div>
-
-      <p><p><p>
-        <div class="col">
-          <input type="submit" value="Enregistrer" class="btn btn-outline-primary"></input>
-        </div>
-    </div>
-      <div class="col-sm">
-      </div>
-    </div>
-  </div>
-
+  <div class="container ">
+    <p><p><p><p><p><p><p><p><p><p><p><p><p><p><p><p><p><p><p><p><p><p><p><p>
+<legend><b><i class="text-success"><h3><u>VOS ALIMENTS</u></h3></i></b></legend>
+<form class="form-inline my-2 my-lg-0" action="index.php?page=aliment" method="post">
+    <input class="form-control mr-sm-2" placeholder="supprimer un aliment" type="text" name="nom_aliment"><br>
+    <input class="btn btn-outline-success my-2 my-sm-0"  type="submit" value="supprimer">
 </form>
+    <table class="table table-hover  table table-borderless">
+      <thead class="thead-dark">
+      <tr>
+        <th scope="col">Nom de l'aliment</th>
+        <th scope="col">Quantité</th>
+        <th scope="col">Date de peremption</th>
+      </tr>
+    </thead>
+    <tbody>
+      <?php
+      while($data = $resultat_data->fetch()){
+        echo '<tr>
+            <td>'; echo  $data['Nom']; echo'</td>
+            <td>';echo $data['quantite'];echo '</td>
+            <td>';echo $data['date_peremption'];echo '</td>
+        </tr>';
+      }
+    ?>
+    </tbody>
+  </table>
 </div>
 
-<!bloc3>
+<div class="container">
+  <div class="row">
+    <div class="col-sm">
+
+    </div>
+    <div class="col-sm">
+      <form action="aliment.html" method="post" class="form-inline my-2 my-lg-0">
+        <input value="Nouvel Aliment" class="btn btn-outline-success my-2 my-sm-0" type="submit"></input>
+      </form>
+    </div>
+    <div class="col-sm">
+
+    </div>
+  </div>
+</div>
+
 
 
   </body>
