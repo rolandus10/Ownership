@@ -94,12 +94,13 @@
 <legend><b><i class="text-success"><h3><u>VOS ALIMENTS</u></h3></i></b></legend>
 <form class="form-inline my-2 my-lg-0" action="index.php?page=aliment" method="post">
     <input class="form-control mr-sm-2" placeholder="supprimer un aliment" type="text" name="nom_aliment"><br>
-    <input class="btn btn-outline-success my-2 my-sm-0"  type="submit" value="supprimer">
-</form>
+    <input class="btn btn-outline-danger my-2 my-sm-0"  type="submit" value="supprimer">
+</form><br>
     <table class="table table-hover  table table-borderless">
       <thead class="thead-dark">
       <tr>
         <th scope="col">Nom de l'aliment</th>
+        <th scope="col">description</th>
         <th scope="col">Quantité</th>
         <th scope="col">Date de peremption</th>
       </tr>
@@ -109,6 +110,7 @@
       while($data = $resultat_data->fetch()){
         echo '<tr>
             <td>'; echo  $data['Nom']; echo'</td>
+            <td>';echo $data['description'];echo '</td>
             <td>';echo $data['quantite'];echo '</td>
             <td>';echo $data['date_peremption'];echo '</td>
         </tr>';

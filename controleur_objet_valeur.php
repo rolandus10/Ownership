@@ -43,7 +43,7 @@ if (!empty($_POST['nom'])
 
     //on doit creer une vue pour afficher ce message
     echo '<p> Objet de valeur enregistré </p>';
-    include "form/objet_valeur.html";
+    include "objet_valeur.html";
   }
 
   catch(Exception $e){
@@ -93,7 +93,6 @@ if(!empty($_POST['nom_objet'])){
   include 'objet_valeur_view.php';
 }
 else {
-  echo '<p> des champs sont vides ou incorrectes </p>';
-  include 'form/objet_valeur.html';
+  include 'objet_valeur.html';
 }
  ?>

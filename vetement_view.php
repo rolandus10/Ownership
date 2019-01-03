@@ -94,13 +94,14 @@
 <legend><b><i class="text-success"><h3><u>VOS VETEMENTS</u></h3></i></b></legend>
 <form class="form-inline my-2 my-lg-0" action="index.php?page=vetements" method="post">
     <input class="form-control mr-sm-2" placeholder="supprimer un objet" type="text" name="nom_vetement"><br>
-    <input class="btn btn-outline-success my-2 my-sm-0"  type="submit" value="supprimer">
-</form>
+    <input class="btn btn-outline-danger my-2 my-sm-0"  type="submit" value="supprimer">
+</form><br>
     <table class="table table-hover  table table-borderless">
       <thead class="thead-dark">
       <tr>
         <th scope="col">Nom</th>
         <th scope="col">couleur</th>
+        <th scope="col">description</th>
         <th scope="col">type</th>
       </tr>
       <?php
@@ -108,6 +109,7 @@
         echo '<tr>
             <td>'; echo  $data['Nom']; echo'</td>
             <td>';echo $data['couleur'];echo '</td>
+            <td>';echo $data['description'];echo '</td>
             <td>';echo $data['type'];echo '</td>
         </tr>';
       }

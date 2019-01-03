@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
-    <link rel="stylesheet" href="mycss.css">
+    <link rel="styleshee" href="">
     <meta name="viewport" content="width=device-width initial-scale=1" >
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
@@ -10,22 +10,36 @@
     <title>Nouvel utilisateur</title>
   </head>
   <body>
-    <p>Veuiller entrer les informations dans les champs</p>
+    <!bloc1>
+    <div class="container">
+      <div class="row">
+        <div class="col-sm">
+          <!One of three columns>
+        </div>
+        <div class="col-sm">
+          <div class="jumbotron">
+    <h1> INSCRIPTION</h1><br>
+    <p>Veuillez entrer les informations dans les champs</p>
     <form class="" action="index.php?page=validation" method="post">
-      <label for="nom">nom:</label><input type="text" name="nom"><br>
-      <label for="prenom">prenom:</label><input type="text" name="prenom"><br>
-      <label for="ville">ville:</label><input type="text" name="ville"><br>
-      <label for="pass">mot de passe :</label><input type="password" name="pass"><br>
-      <label for="passconfirme">confirmer mot de passe :</label><input type="password" name="passconfirme"><br>
-      <label for="mail">email:</label><input type="email" name="email"><br>
-      <input type="submit" value="ok">
-    </form>
-
-    <form class="" action="index.php?page=" method="post">
-      <input type="submit" value="Annuler">
+      <label for="nom">nom:</label><input class="form-control" placeholder="nom" type="text" name="nom">
+      <label for="prenom">prenom:</label><input class="form-control"type="text" placeholder="prenom" name="prenom">
+      <label for="ville">ville:</label><input class="form-control" type="text" placeholder="ville" name="ville">
+      <label for="pass">mot de passe :</label><br><input class="form-control" type="password" placeholder="mot de passe" name="pass">
+      <label for="passconfirme">confirmer mot de passe :</label><input class="form-control"type="password" placeholder="confirmer mot de passe"name="passconfirme">
+      <label for="mail">email:</label><input class="form-control"type="email" placeholder="email"name="email">
+      <br><input class="btn btn-outline-success my-2 my-sm-0" type="submit" value="ok">
     </form>
     <form class="form-inline my-2 my-lg-0" action="index.php?page=login" method="post">
         <input class="btn btn-outline-success my-2 my-sm-0"  type="submit" value="login">
     </form>
+    <form class="" action="index.php?page=" method="post">
+      <input class="" type="submit" value="Annuler">
+    </form>
+    </div>
+    </div>
+    <div class="col-sm">
+      <!One of three columns>
+    </div>
+    </div>
   </body>
 </html>

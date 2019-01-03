@@ -15,7 +15,6 @@ $prix=$_POST['prix'];
 if (!empty($_POST['nom'])
 && !empty($_POST['description'])
 && !empty($_POST['couleur'])
-
 && !empty($_POST['taille'])
 && !empty($_POST['marque'])
 && !empty($_POST['type'])
@@ -54,7 +53,6 @@ if (!empty($_POST['nom'])
 
     //on doit creer une vue pour afficher ce message
     echo '<p> vetement enregistré </p>';
-    include "vetement.html";
   }
 
   catch(Exception $e){
@@ -105,7 +103,6 @@ if(!empty($_POST['nom_vetement'])){
   include 'vetement_view.php';
 }
 else {
-  echo '<p> des champs sont vides ou incorrectes </p>';
   include 'vetement.html';
 }
 

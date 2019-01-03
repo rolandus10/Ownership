@@ -93,8 +93,8 @@
 <legend><b><i class="text-success"><h3><u>VOS OBJETS DE VALEUR</u></h3></i></b></legend>
 <form class="form-inline my-2 my-lg-0" action="index.php?page=objet_valeur" method="post">
     <input class="form-control mr-sm-2" placeholder="supprimer un objet" type="text" name="nom_objet"><br>
-    <input class="btn btn-outline-success my-2 my-sm-0"  type="submit" value="supprimer">
-</form>
+    <input class="btn btn-outline-danger my-2 my-sm-0"  type="submit" value="supprimer">
+</form><br>
     <table class="table table-hover  table table-borderless">
       <thead class="thead-dark">
       <tr>
